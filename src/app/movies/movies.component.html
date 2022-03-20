@@ -1,0 +1,32 @@
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="top w-25 mt-5"></div>
+        <p class=" h2 my-4"> Trending <br> movie <br> to watch Now</p>
+        <p class=" text-muted  "> most wathced movies by today</p>
+      <div class="top w-100"></div>
+  </div>
+  <div *ngFor="let movie of getDayApis" class=" col-md-2">
+    <div class="movie position-relative">
+
+      <a [routerLink]="['/moviedetail',movie.id]">
+        <img  [src]= " imageLink + movie.poster_path " class="w-100 my-4" alt="">
+        <p class=" h5 "> {{movie.title}} </p>
+        <p class=" vote position-absolute p-2 top-0 end-0 bg-info mt-4 " > {{movie.vote_average}} </p>
+      </a>
+
+
+
+    </div>
+  </div>
+  <div *ngFor="let movie of getWeekApis" class=" col-md-2">
+    <div class="movie">
+      <a [routerLink]="['/moviedetail',movie.id]">
+        <img  [src]= " imageLink + movie.poster_path " class="w-100 my-4" alt="">
+        <p class=" h5 "> {{movie.title}} </p>
+      </a>
+
+    </div>
+  </div>
+</div>

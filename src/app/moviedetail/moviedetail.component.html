@@ -1,0 +1,19 @@
+
+
+<div class="row">
+  <div class="col-md-4 ">
+    <img [src]="imageLink +moviedetail.poster_path" class=" w-100 " alt="">
+  </div>
+  <div class="col-md-8">
+    <div class="content mt-5">
+      <h3>{{moviedetail.original_title}}</h3>
+      <p class="text-muted p-2">{{moviedetail.overview}}</p>
+      <div >
+        <p>genres</p>
+        <ul>
+          <li *ngFor="let g of moviedetail.genres"> {{g.name}} </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

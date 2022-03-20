@@ -1,0 +1,50 @@
+
+<div class=" fixed-top">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark  ">
+  <div class="container-fluid">
+    <a class="navbar-brand" >Noxe</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a *ngIf="disableNav" class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="bg-info" >Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a *ngIf="disableNav" class="nav-link active" aria-current="page" routerLink="/movies" routerLinkActive="bg-info" >movies</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="disableNav" class="nav-link active" aria-current="page" routerLink="/tv" routerLinkActive="bg-info" >tv</a>
+        </li>
+         <li class="nav-item">
+          <a *ngIf="disableNav" class="nav-link active" aria-current="page" routerLink="/about" routerLinkActive="bg-info" >person</a>
+        </li>
+
+
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <input *ngIf="disableNav" type="text" class=" form-control mb-0 w-50 mx-2" placeholder="search" name="" id="">
+        <div class="mb-0 d-flex align-items-center">
+         <a *ngIf="disableNav" href="https://ar-ar.facebook.com/" target="_blanck"> <i class="fab fa-facebook mx-2 mb-0"></i> </a>
+         <a  *ngIf="disableNav" href="https://www.instagram.com/" target="_blanck">  <i class="fab fa-instagram mx-2 mb-0"></i> </a>
+         <a *ngIf="disableNav" href="https://www.youtube.com/" target="_blanck"> <i class="fab fa-youtube mx-2 mb-0"></i> </a>
+         <a  *ngIf="disableNav" (click)=" loOut()"  class="mx-2"> Logout </a>
+         <a *ngIf="!disableNav" routerLink="/login"   class="mx-2"> login </a>
+         <a  *ngIf="!disableNav" routerLink="/register"  class="mx-2"> Register </a>
+        </div>
+
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>

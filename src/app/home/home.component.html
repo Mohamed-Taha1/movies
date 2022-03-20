@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+  <div class="row ">
+    <div class="col-md-4">
+      <div class="top w-25 mt-5"></div>
+        <p class=" h2 my-4"> Trending <br> movie <br> to watch Now</p>
+        <p class=" text-muted  "> most wathced movies by today</p>
+      <div class="top w-100"></div>
+    </div>
+    <div *ngFor="let movie of getMovie" class="col-md-2">
+      <div class="movie position-relative">
+        <a [routerLink]= "['/moviedetail',movie.id]">
+          <img class="w-100  mt-4" [src]="imageLink + movie.poster_path" alt="">
+          <h3  class="h6 mt-2 "> {{movie.title}} </h3>
+          <div class="vote position-absolute  mt-4 p-2 top-0 end-0 bg-info"> {{movie.vote_average}} </div>
+        </a>
+
+
+
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <div class="top w-25 mt-5"></div>
+        <p class=" h2 my-4"> Trending <br> tv <br> to watch Now</p>
+        <p class=" text-muted  "> most tv watched by today</p>
+      <div class="top w-100"></div>
+    </div>
+    <div *ngFor="let tv of getTv" class="col-md-2">
+      <div class="movie position-relative">
+
+        <a [routerLink]="['/tvdetail',tv.id]">
+          <img class="w-100  mt-4" [src]="imageLink + tv.poster_path" alt="">
+          <h3  class="h6 mt-2 "> {{tv.original_name}} </h3>
+          <div class="vote position-absolute  mt-4 p-2 top-0 end-0 bg-info"> {{tv.vote_average}} </div>
+        </a>
+
+
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="top w-25 mt-5"></div>
+        <p class=" h2 my-4"> Trending <br> peopel <br> toody</p>
+        <p class=" text-muted  "> most trwnding peopel today</p>
+      <div class="top w-100"></div>
+    </div>
+    <div *ngFor="let person of getPrson" class="col-md-2">
+      <div class="movie position-relative">
+        <a [routerLink]="['/persondetail',person.id]">
+          <img class="w-100  mt-4" [src]="imageLink + person.profile_path" alt="">
+          <h3  class="h6 mt-2 "> {{person.name}} </h3>
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+

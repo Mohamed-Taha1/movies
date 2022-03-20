@@ -1,0 +1,28 @@
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="top w-25 mt-5"></div>
+      <p class=" h2 my-4"> Trending <br> tv <br> to watch Now</p>
+      <p class=" text-muted  "> most tv watched by today</p>
+    <div class="top w-100"></div>
+  </div>
+  <div *ngFor="let tv of getTvDay" class="col-md-2 position-relative">
+    <a [routerLink]="['/tvdetail',tv.id]">
+      <img [src]="imageLink+tv.poster_path" alt="" class=" w-100 my-2">
+      <p class=" h5 mt-1">{{tv.name}}</p>
+      <p class="vote position-absolute p-2 top-0 end-0 bg-info mt-2"> {{ tv.vote_average}} </p>
+
+    </a>
+
+  </div>
+  <div *ngFor="let tv of getTvweek" class="col-md-2 position-relative">
+    <a [routerLink]="['/tvdetail',tv.id]">
+      <img [src]="imageLink+tv.poster_path" alt="" class=" w-100 my-2">
+      <p class=" h5 mt-1">{{tv.name}}</p>
+      <p class="vote position-absolute p-2 top-0 end-0 bg-info mt-2"> {{ tv.vote_average}} </p>
+    </a>
+
+
+  </div>
+</div>

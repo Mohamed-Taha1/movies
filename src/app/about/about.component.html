@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-md-4 " >
+    <div class="top w-25 mt-5"></div>
+      <p class=" h2 my-4"> Trending <br> peopel <br> toody</p>
+      <p class=" text-muted  "> most trwnding peopel today</p>
+    <div class="top w-100"></div>
+  </div>
+  <div *ngFor="let person of getPersonWeek" class="col-md-2">
+    <a [routerLink]="['/persondetail',person.id]">
+      <img [src]="imageLink + person.profile_path " alt="" class=" w-100 my-3">
+      <p class=" h4">{{person.name}}</p>
+    </a>
+
+  </div>
+
+</div>
